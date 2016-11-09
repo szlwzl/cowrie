@@ -105,7 +105,7 @@ $ source cowrie-env/bin/activate
 
 Take a look at the configuration file and make changes as desired.  The defaults work well in most cases.
 ```
-$ cp cowrie.cfg.dist cowrie.cfg
+$ cp etc/cowrie.cfg.dist etc/cowrie.cfg
 ```
 
 ## Step 5: Generate a DSA key
@@ -175,7 +175,7 @@ $ sudo chmod 770 /etc/authbind/byport/23
 ```
 
 * Edit start.sh and modify the AUTHBIND_ENABLED setting
-* Change listen_port to 22 in cowrie.cfg
+* Change listen_port to 22 in etc/cowrie.cfg
 
 ## Troubleshooting
 
