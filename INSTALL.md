@@ -114,7 +114,7 @@ This step should not be necessary, however some versions of twisted
 are not compatible.  To avoid problems in advance, run:
 
 ```
-$ cd data
+$ cd etc
 $ ssh-keygen -t dsa -b 1024 -f ssh_host_dsa_key
 $ cd ..
 ```
@@ -191,14 +191,14 @@ $ sudo chmod 770 /etc/authbind/byport/23
 This is caused by Twisted incompatibilities. A workaround is to run:
 
 ```
-$ cd cowrie/data
+$ cd cowrie/etc
 $ ssh-keygen -t dsa -b 1024 -f ssh_host_dsa_key
 ```
 
 * If there are issues creating the RSA keys, the following is a workaround:
 
 ```
-$ cd cowrie/data
+$ cd cowrie/etc
 $ ssh-keygen -t rsa -b 2048 -f ssh_host_rsa_key
 ```
 
