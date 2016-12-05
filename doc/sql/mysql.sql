@@ -69,3 +69,13 @@ CREATE TABLE IF NOT EXISTS `keyfingerprints` (
   `fingerprint` varchar(100) NOT NULL,
   PRIMARY KEY  (`id`)
 ) ;
+
+
+CREATE TABLE `tcpipforwardhosts` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `session` char(32) NOT NULL DEFAULT '',
+  `dst_ip` varchar(15) NOT NULL DEFAULT '',
+  `dst_port` smallint(11) NOT NULL,
+  `data` varchar(2500) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB;
