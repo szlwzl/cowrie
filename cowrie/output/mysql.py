@@ -202,3 +202,8 @@ class Output(cowrie.core.output.Output):
                 'INSERT INTO `keyfingerprints` (`session`, `username`, `fingerprint`) VALUES (%s, %s, %s)',
                 (entry["session"], entry["username"], entry["fingerprint"]))
 
+        elif entry["eventid"] == 'cowrie.direct-tcpip.data':
+            self.simpleQuery('INSERT INTO `tcpipforwardhosts` (`session`, `dst_ip`, `dst_port`, `data`) VALUES (%s, %s, %s, %s)',
+                             (entry["session"], entry['dst_ip'], int(entry['dst_port']),
+                              entry["data"]))
+
